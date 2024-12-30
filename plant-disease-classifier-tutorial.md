@@ -20,9 +20,12 @@ Head over to the [Custom Vision Portal](https://www.customvision.ai/projects) to
   
 Upload images for each class, starting with `bacterial_leaf_blight`, and tag them accordingly. Don't forget to include images for the other categories: `bacterial_leaf_streak`, `bacterial_panicle_blight`, `blast`, `brown spot`, `dead heart`, `downy mildew`, `hispa`, `normal`, and `tungro`. 📷  
 
-![Add the training images](/img/02-image1.ipg)
+![Upload the images through the portal](/img/02-image1.jpg)
+
 
 ![Add the training images](/img/02-image2.png)
+
+
 ## **Train the Model**  
   
 Azure Custom Vision offers two training options: **Quick Training** and **Advanced Training**.  
