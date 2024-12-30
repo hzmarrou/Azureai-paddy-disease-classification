@@ -1,19 +1,20 @@
 
-## Introduction
-In the realm of agriculture, early detection and treatment of plant diseases are crucial for maintaining the health of crops and ensuring food security. With the advent of artificial intelligence (AI), particularly Azure AI Custom Vision service, farmers and agronomists now have a powerful tool at their disposal to identify and manage plant diseases more efficiently than ever before.
+##Introduction
+ 
+In modern agriculture, the early detection and management of plant diseases are vital for safeguarding crop health and ensuring food security. The integration of artificial intelligence (AI), particularly through Azure AI's Custom Vision service, offers farmers and agronomists a cutting-edge solution to identify and control plant diseases with unprecedented efficiency.
 
 ### Development
-Azure AI Custom Vision is a cognitive service that enables users to build custom image classifiers using machine learning. It is particularly well-suited for applications such as a plant disease classifier due to its robust feature set and ease of use.
+ 
+Azure AI Custom Vision is a sophisticated cognitive service designed to enable the creation of custom image classifiers using machine learning technology. Its comprehensive feature set and user-friendly interface make it particularly effective for applications such as plant disease classification.
 
-####  Data collection
-The first step in building a classifier model is to collect a dataset of plant images. These images should include a variety of plants, both healthy and diseased, under different conditions and stages of infection.
+### Data Collection
+ 
+The initial step in developing a classifier model involves gathering a comprehensive dataset of plant images. This dataset should encompass a wide range of plants, both healthy and diseased, captured under varying conditions and stages of infection. For this project, we sourced images from Kaggle, which you can download [here](https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset).
 
-For this example we collected the images from Kaggle, you can download them [here](https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset).
+### Data Tagging
+ 
+Once the dataset is assembled, each image must be accurately tagged with labels indicating the plant's health status or the specific type of disease present. This critical step forms the foundation for training the AI model. Fortunately, the images obtained from Kaggle are pre-tagged by folder, and there are separate images available for training, validation, and testing purposes.
 
-#### Data tagging
-Once the dataset is collected, each image must be tagged with labels indicating whether the plant is healthy or specifying the type of disease present. This step is critical as it serves as the foundation for training the AI model.
-
-The images from Kaggle are already tagged by folder, also there are images for training and validation/testing.
 
 ## Example from Kaggle
 ###  Paddy Disease Detection and Classification
