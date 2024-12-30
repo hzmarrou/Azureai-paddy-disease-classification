@@ -13,16 +13,14 @@ For this example we collected the images from Kaggle, you can download them [her
 #### Data tagging
 Once the dataset is collected, each image must be tagged with labels indicating whether the plant is healthy or specifying the type of disease present. This step is critical as it serves as the foundation for training the AI model.
 
-The images from Kaggle are already tagged by folder, also there are images for training and validation.
-
+The images from Kaggle are already tagged by folder, also there are images for training and validation/testing.
 
 ## Example from Kaggle
-##  Paddy Disease Detection and Classification
+###  Paddy Disease Detection and Classification
 
 This project focuses on automating the identification of diseases in paddy crops using computer vision techniques. Paddy (Oryza sativa), a staple food worldwide, is predominantly cultivated in tropical climates, particularly in Asia. However, paddy cultivation is highly susceptible to diseases and pests, which can cause yield losses of up to 70%. Effective disease management requires expert supervision, but the limited availability of crop protection experts makes manual diagnosis both time-consuming and expensive.
 
 To address this challenge, this project leverages a dataset of labeled paddy leaf images to develop an AI-driven disease classification model. By automating the disease detection process, we aim to provide an efficient, cost-effective solution for paddy farmers to safeguard their crops.
-
 
 
 ### Dataset Overview
@@ -37,4 +35,3 @@ Each image is accompanied by additional metadata to enhance model accuracy:
 
 Paddy Variety: The type of paddy.
 Age: The age of the paddy in days.
-
