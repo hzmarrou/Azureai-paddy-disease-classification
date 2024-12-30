@@ -1,5 +1,5 @@
 
-##Introduction
+## Introduction
  
 In modern agriculture, the early detection and management of plant diseases are vital for safeguarding crop health and ensuring food security. The integration of artificial intelligence (AI), particularly through Azure AI's Custom Vision service, offers farmers and agronomists a cutting-edge solution to identify and control plant diseases with unprecedented efficiency.
 
