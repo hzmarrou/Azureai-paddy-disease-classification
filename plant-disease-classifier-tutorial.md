@@ -65,25 +65,32 @@ For this demo we choose the quick training option. This is the output from the q
 
 <image>
 
-In the picture, you see three key metrics used to evaluate the performance of a machine learning model for image classification: Precision, Recall, and AP (Average Precision). Here's what each of these metrics means in simple terms:
+In the picture, you see three key metrics used to evaluate the performance of a machine learning model for image classification: `Precision`, `Recall`, and `AP` (Average Precision). Here's what each of these metrics means in simple terms:
 
 #### Precision
 * <strong>Definition</strong>.: Precision is the percentage of correctly predicted positive results out of all positive predictions made by the model.
-<strong>Simple Explanation</strong>.: It tells you how often the model's predictions are correct when it says an image belongs to a certain class.
-<strong>Example</strong>.: If the model predicts 100 images as a certain disease, and 95 of them are actually correct, the precision is 95%.
+
+* <strong>Simple Explanation</strong>.: It tells you how often the model's predictions are correct when it says an image belongs to a certain class.
+
+* <strong>Example</strong>.: If the model predicts 100 images as a certain disease, and 95 of them are actually correct, the precision is 95%.
 
 #### Recall
 
-<strong>Definition</strong>: Recall is the percentage of actual positive cases that were correctly identified by the model.
-<strong>Simple Explanation</strong>: It measures how well the model finds all the images that truly belong to a certain class.
-<strong>Example</strong>: If there are 100 actual images of a disease, and the model correctly identifies 94 of them, the recall is 94%.
+* <strong>Definition</strong>: Recall is the percentage of actual positive cases that were correctly identified by the model.
+
+* <strong>Simple Explanation</strong>: It measures how well the model finds all the images that truly belong to a certain class.
+
+* <strong>Example</strong>: If there are 100 actual images of a disease, and the model correctly identifies 94 of them, the recall is 94%.
 
 #### AP (Average Precision)
 
-Definition: AP combines precision and recall into a single metric that summarizes the model's performance across different threshold levels.
-Simple Explanation: It provides an overall measure of the model's ability to identify classes correctly, considering both precision and recall.
-Example: A higher AP means the model is generally good at both identifying true positives and minimizing false positives across various thresholds.
-Performance Per Tag
+* <strong>Definition</strong>: AP combines precision and recall into a single metric that summarizes the model's performance across different threshold levels.
+
+* <strong>Simple Explanation</strong>: It provides an overall measure of the model's ability to identify classes correctly, considering both precision and recall.
+
+* <strong>Example</strong>: A higher AP means the model is generally good at both identifying true positives and minimizing false positives across various thresholds.
+
+##### Performance Per Tag
 In the table, you see the performance metrics (Precision, Recall, AP) for each specific class or "tag" in your dataset, along with the image count for each class. This helps you understand how well the model performs for each specific category.
 
 Precision, Recall, and AP per Tag: Indicates how accurately and completely the model identifies each specific type of image, like "bacterial leaf streak" or "blast."
