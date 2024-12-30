@@ -56,7 +56,8 @@ Azure Custom Vision offers two training options: **Quick Training** and **Advanc
   
 - **Quick Training:** Perfect for beginners and small datasets.  
 - **Advanced Training:** Optimal for production-level models and complex datasets.  
-  
+
+----------------------------------------------------------------------------------------------------------------------------------------------  
 For this demo, we'll use **Quick Training**. Here's a glimpse of the metrics after training:  
 
  ![Training Results](/img/07-image.png)
