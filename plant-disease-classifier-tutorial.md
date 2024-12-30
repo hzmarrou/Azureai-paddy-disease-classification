@@ -4,7 +4,7 @@ Welcome to this enhanced tutorial on setting up a Custom Vision AI project using
   
 ## **Step 1: Create an Azure AI Services Resource**  
   
-Begin by accessing the **Azure Portal**. Search for the *Azure AI multi-service account* and proceed to create an account.  
+Begin by accessing the **Azure Portal**. Search for the *Azure AI services* and proceed to create a service.  
   
 ## **Create a Custom Vision AI Project**  
   
@@ -66,7 +66,7 @@ Once satisfied, deploy the model to integrate with applications used by agricult
 - **Publish:** Set the model name and prediction resource, then publish.  
 - **Access Prediction URL:** Obtain the Prediction Key for API access.  
   
-Developers can leverage the model through the `azure-cognitiveservices-vision-customvision` SDK. For an example, refer to the provided Notebook.  
+Developers can leverage the model through the `azure-cognitiveservices-vision-customvision` SDK. I create an example how to use the model in this [Notebook](/paddy-disease-classifier.ipynb).  
   
 ### **Integration Example:**  
   
