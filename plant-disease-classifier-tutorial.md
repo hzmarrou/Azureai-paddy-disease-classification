@@ -13,36 +13,51 @@ Head over to the [Custom Vision Portal](https://www.customvision.ai/projects) to
 - **Project Name:** `paddy-disease-bejo`  
 - **Project Type:** *Classification* - This project aims to classify images into one of the following categories: `bacterial_leaf_blight`, `bacterial_leaf_streak`, `bacterial_panicle_blight`, `blast`, `brown spot`, `dead heart`, `downy mildew`, `hispa`, `normal`, and `tungro`.  
 - **Classification Type:** *Multiclass* - Choose Multiclass since each image belongs to only one category. If an image could belong to multiple categories, you would select *Multilabel*.  
-  
+
+![Create a project](/img/01-image.png)
+
 ## **Add Images**  
   
 Upload images for each class, starting with `bacterial_leaf_blight`, and tag them accordingly. Don't forget to include images for the other categories: `bacterial_leaf_streak`, `bacterial_panicle_blight`, `blast`, `brown spot`, `dead heart`, `downy mildew`, `hispa`, `normal`, and `tungro`. 📷  
-  
+
+![Add the training images](/img/02-image1.ipg)
+
+![Add the training images](/img/02-image2.png)
 ## **Train the Model**  
   
 Azure Custom Vision offers two training options: **Quick Training** and **Advanced Training**.  
-  
+
+  ![Train the model](/img/03-image.png)
+  ![Train the model](/img/04-image.png)
+
+
 ### **Quick Training**  
   
 - **Purpose:** Ideal for speed and ease, especially for rapid prototyping.  
 - **Configuration:** Minimal setup with default parameters.  
 - **Speed:** Fast results, perfect for small datasets and quick iterations.  
 - **Use Case:** Best for initial experiments or quick evaluations.  
-  
+
+   ![Quick Training](/img/05-image.png)
+
 ### **Advanced Training**  
   
 - **Purpose:** Offers detailed control for tailored model training.  
 - **Configuration:** Fine-tune parameters like iterations and learning rate.  
 - **Flexibility:** Adjust resources and training duration for better accuracy.  
 - **Use Case:** Suitable for refining models and handling larger datasets.  
-  
+   
+   ![Advanced Training](/img/06-image.png)
+
 ### **Choosing Between Them**  
   
 - **Quick Training:** Perfect for beginners and small datasets.  
 - **Advanced Training:** Optimal for production-level models and complex datasets.  
   
 For this demo, we'll use **Quick Training**. Here's a glimpse of the metrics after training:  
-  
+
+ ![Training Results](/img/07-image.png)
+
 ### **Key Metrics:**  
 - **Precision:** Correct positive predictions out of all positive predictions.  
 - **Recall:** Correct identification of actual positive cases.  
@@ -58,7 +73,9 @@ Upon training completion, assess the model with a separate test image set. Itera
   
 - **Quick Test:** Upload a plant image and observe the predictions.  
 - **View Predictions:** Check model performance and adjust as necessary.  
-  
+
+  ![Test the API](/img/08-image.png)
+
 ## **Deployment and Integration**  
   
 Once satisfied, deploy the model to integrate with applications used by agricultural experts. Use the Custom Vision service's APIs for seamless integration.  
@@ -66,11 +83,8 @@ Once satisfied, deploy the model to integrate with applications used by agricult
 - **Publish:** Set the model name and prediction resource, then publish.  
 - **Access Prediction URL:** Obtain the Prediction Key for API access.  
   
+ ![Publish the model for use](/img/09-image.png)
+
 Developers can leverage the model through the `azure-cognitiveservices-vision-customvision` SDK. I create an example how to use the model in this [Notebook](/paddy-disease-classifier.ipynb).  
-  
-### **Integration Example:**  
-  
-Integrate the model into a Blazor web app:  
-  
-1. Clone the repository.  
-2. Update `appsettings
+
+Field users require a more user-friendly solution, such as a mobile app, to detect diseases directly on-site. To address this need, we developed a basic application using Blazor, an open-source web framework that allows developers to create web user interfaces. Please visit this [repository]() to clone the app, which can be eventually deployed online.
