@@ -109,7 +109,24 @@ Use the Custom Vision service’s APIs to integrate the deployed model into clie
 
 ## 🔧 Automate Model Training with the Custom Vision API
 
-To automate model training, use the Custom Vision Training API:
+### Gather the project settings
+
+The project you have created has been assigned a unique identifier, which you will need to specify in any code that interacts with it.
+
+1. Click the settings (⚙) icon at the top right of the **Performance** page to view the project settings.
+
+2. Under **General** (on the left), note the **Project Id** that uniquely identifies this project.
+
+3. On the right, under **Resources** note that the key and endpoint are shown. These are the details for the training resource (you can also obtain this information by viewing the resource in the Azure portal).
+Use the training API
+
+### Use the Training API 
+
+To automate model training, use the Custom Vision Training API.
+
+* In Visual Studio Code, in the Explorer pane, browse to the `azure-custom-vision-python-sdk` folder and expand the `code` folder.
+
+* Right-click the train-classifier folder and open an integrated terminal. Then install the Custom Vision Training package by running the appropriate command for your language preference:
 
 1. Install the Python SDK:
    ```bash
@@ -118,20 +135,22 @@ To automate model training, use the Custom Vision Training API:
 
 2. Update configuration settings (e.g., endpoint, key, project ID) in a `.env` file.
 
-3. Use the SDK to:
-   - Upload and tag images programmatically.
-   - Create training iterations.
+3. Open the code file `train-classifier.py` in the **train-classifier** folder and review the code it contains, noting the following details:
+
+   - Namespaces from the package you installed are imported.
+   - The `main` function retrieves the configuration settings, and uses the key and endpoint to create an authenticated **CustomVisionTrainingClient**, which is then used with the project ID to create a Project reference to your project.
+   - The `Upload_Images` function retrieves the tags that are defined in the Custom Vision project and then uploads image files from correspondingly named folders to the project, assigning the appropriate tag ID.
+   - The `The Train_Model` function creates a new training iteration for the project and waits for training to complete.
    
-4. Train the model:
+4. Return the integrated terminal for the train-classifier folder, and enter the following command to run the program:
+
    ```python
-   from azure.cognitiveservices.vision.customvision.training import CustomVisionTrainingClient
-   
-   trainer = CustomVisionTrainingClient(training_key, endpoint)
-   trainer.create_images_from_files(project_id, images)
-   trainer.train_project(project_id)
+   python train-classifier.py
    ```
 
-5. Verify training results in the Custom Vision portal.
+5. Wait for the program to end. Then return to your browser and view the Training Images page for your project in the Custom Vision portal (refreshing the browser if necessary).
+
+6. Verify that some new tagged images have been added to the project. Then view the Performance page and verify that a new iteration has been created.
 
 ---
 
@@ -149,3 +168,21 @@ To automate model training, use the Custom Vision Training API:
 ### Test Predictions
 Use the prediction API to test the model on new images. Retrieve predicted tags and their confidence scores to validate model performance.
 
+1. Expand the test-classifier folder to view the files it contains, which are used to implement a test client application for your image classification model.
+
+2. Open the configuration file for your client application ().env for Python) and update the configuration values it contains to reflect the endpoint and key for your Custom Vision prediction resource, the project ID for the classification project, and the name of your published model (which should be fruit-classifier). Save your changes.
+
+3. Open the code file for your client application (`test-classification.py`) and review the code it contains, noting the following details:
+
+* Namespaces from the package you installed are imported
+
+* The `main` function retrieves the configuration settings, and uses the key and endpoint to create an authenticated CustomVisionPredictionClient.
+
+* The prediction client object is used to predict a class for each image in the test-images folder, specifying the project ID and model name for each request. Each prediction includes a probability for each possible class, and only predicted tags with a probability greater than 50% are displayed.
+
+4. Return the integrated terminal for the test-classifier folder, and enter the following SDK-specific command to run the program:
+ ```python
+   python test-classifier.py
+   ```
+
+5. View the label (tag) and probability scores for each prediction. You can view the images in the test-images folder to verify that the model has classified them correctly.   
